@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色选择器</title>
+</head>
+<body>
+    <input type="color" name="color" id="color" onchange="changeColor()">
+    <span id="colorInfo"></span>
+</body>
+<script>
+    var color = document.getElementById("color");
+    var colorInfo = document.getElementById("colorInfo");
+    colorInfo.style.color = color.value;
+    colorInfo.innerHTML = color.value;
+    function changeColor() {
+        colorInfo.style.color = color.value;
+        colorInfo.innerHTML = color.value;
+    }
+</script>
+</html>
